@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://vjs.zencdn.net/7.7.6/video-js.css" rel="stylesheet"/>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap" rel="stylesheet">
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="https://vjs.zencdn.net/7.7.6/video.js%22%3E"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="js/main.js"> </script>
+    <title>Code for kids </title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                 <img src="img/logo-roze-mmt@2x.png" id="logo" alt="logo"> 
+                <ul>
+                    <li><a class="headertekst" href="#">OVER ONS</a></li>
+
+                    <li><a class="headertekst" href="#">LESMATERIAAL</a></li>
+
+                    <li><a class="headertekst" href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <label for="darkmode">
+            <section>
+                <div class="darkmode">
+                    <input type="checkbox" value="1" id="darkmode" name="" />
+                    <label for="darkmode"></label>
+                </div>
+            </section>
+        </label>
+
+
+    </header>
+
+    <main>
+        <section>
+            <div class="image-hero">
+                <div class="kleur">
+                    <div class="container">
+                        <h1> Van beginner naar expert <br> Het lesmateriaal brengt je verder </h1>
+                        <p> Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta
+                            sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                            Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet
+                            rutrum faucibus dolor auctor.</p>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <div id="block">
+            <div class="vierkant" id="vierkant1">
+                <div class="img-block">
+                    <img src="img/blok1-leer.png" id="leer" alt="blok1">
+                </div>
+                <p> Leer </p>
+            </div>
+            <div class="vierkant" id="vierkant2">
+                <div class="img-block2">
+                    <img src="img/blok2-codeer.png" id="codeer" alt="blok2">
+                </div>
+                <p>Codeer</p>
+            </div>
+            <div class="vierkant" id="vierkant3">
+                <div class="img-block3">
+                    <img src="img/blok3-speel.png"  id="speel" alt="blok3">
+                </div>
+                <p>Speel</p>
+            </div>
+
+            <div class="clear"> </div>
+        </div>
+
+        <p class="Playlist">Playlist</p>
+
+        <!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h1 class="ml1">
+          <span class="text-wrapper">
+              <span class="letters">Goed gedaan!</span>
+          </span>
+      </h1>
+    </div>
+  
+  </div>
+
+        <div id="accordion">
+
+            <h3>Algemene introductie</h3>
+            <div class="videos">
+                <p class="title">Algemene introductie</p>
+                <div class="pause"> </div>
+                <div class="rewind"> </div>
+                <div class="forward"> </div> 
+              <video
+              id="video1" 
+              class="video-js"
+              preload="auto"
+              data-setup="{}">
+              <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" type="video/mp4">
+             </video>
+    
+            </div> 
+          
+            <h3>Workshop 1: Kleuren met code</h3>
+            <div class="videos">
+                <p class="title">Kleuren met code</p>
+                <div class="pause"> </div>
+                <div class="rewind"> </div>
+                <div class="forward"> </div> 
+              <video
+              id="video2" 
+              class="video-js"
+              preload="auto"
+              data-setup="{}">
+              <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" type="video/mp4">
+             </video>
+            </div>
+
+            <h3>Workshop 2: Vormen maken</h3>
+            <div class="videos">
+                <p class="title">Vormen maken</p>
+                <div class="pause"> </div>
+                <div class="rewind"> </div>
+                <div class="forward"> </div> 
+              <video
+              id="video3" 
+              class="video-js"
+              preload="auto"
+              data-setup="{}">
+              <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" type="video/mp4">
+             </video>
+            </div>
+
+
+            <h3>Workshop 3: Beweging</h3>
+            <div class="videos">
+                <p class="title">Beweging</p>
+                <div class="pause"> </div>
+                <div class="rewind"> </div>
+                <div class="forward"> </div> 
+              <video
+              id="video4" 
+              class="video-js"
+              preload="auto"
+              data-setup="{}">
+              <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" type="video/mp4">
+              </video>
+            </div>
+
+            <h3>Workshop 4: Variable gebruiken</h3>
+            <div class="videos">
+                <p class="title">Variable gebruiken</p>
+                <div class="pause"> </div>
+                <div class="rewind"> </div>
+                <div class="forward"> </div> 
+              <video
+              id="video5" 
+              class="video-js"
+              preload="auto"
+              data-setup="{}">
+              <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" type="video/mp4">
+             </video>
+            </div>
+        </div>
+
+        <div class="contacten">
+            <div class="support">Support</div>
+            <div class="hulp">Onze studenten staan voor je klaar. Etiam porta sem malesuada magna mollis euismod.
+                Nullam id dolor id nibh ultricies vehicula ut id elit. </div>
+            <button id="contact">NAAR CONTACT</button>
+            <div class="clear"></div>
+        </div>
+
+        <div class="slider">
+
+            <div class="persoon1">
+                <div class="fotopersoon"> <img src="img/alina-kovalchuk-1143928-unsplash.jpg"></div>
+
+
+                <div class="infopersoon">
+                    <p class="namen">Alina kovalchuk </p>
+                    <p class="functietekst">Hoofd support</p>
+                    <p><button class="emailbalkje">Mail</button></p>
+                </div>
+            </div>
+            <div class="clear"></div>
+
+
+
+            <div class="persoon2">
+                <div class="fotopersoon"> <img src="img/giorgio-encinas-781653-unsplash.jpg"> </div>
+
+
+                <div class="infopersoon">
+                    <p class="namen">Giorgio Encinas </p>
+                    <p class="functietekst">Hoofd support</p>
+                    <p><button class="emailbalkje">Mail</button></p>
+                </div>
+            </div>
+            <div class="clear"></div>
+
+
+
+            <div class="persoon3">
+                <div class="fotopersoon"> <img src="img/kal-visuals-592091-unsplash.jpg"> </div>
+
+
+                <div class="infopersoon">
+                    <p class="namen">Kal Visuals</p>
+                    <p class="functietekst">Hoofd support</p>
+                    <p><button class="emailbalkje">Mail</button></p>
+                </div>
+            </div>
+            <div class="clear"></div>
+
+
+
+            <div class="persoon4">
+                <div class="fotopersoon"> <img src="img/norman-toth-177973-unsplash.jpg"> </div>
+
+
+                <div class="infopersoon">
+                    <p class="namen">Norman Toth</p>
+                    <p class="functietekst">Hoofd support</p>
+                    <p><button class="emailbalkje">Mail</button></p>
+                </div>
+            </div>
+            <div class="clear"></div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div id="footerID">
+            <h2> Klaar voor de
+                volgende uitdaging?</h2>
+            <p> In ons expertprogramma vind je lessen voor gevorderden </p>
+
+            <button id="komMaarOp"> Kom maar op </button>
+
+        </div>
+
+
+
+    </footer>
+
+
+
+
+</body>
+
+</html>

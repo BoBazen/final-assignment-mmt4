@@ -1,0 +1,1951 @@
+/* light mode */ 
+:root {
+  --witteKleur: #ffffff;
+  --zwarteKleur: #000000;
+  --blok: #F4F2FF;
+  --lichtRozeKleur: #FFAFE3;
+  --lichtRozeKleurNaarWitteKleur:#FFAFE3;
+  --lichtRozeKleurDoorschijnend: rgb(255,175,227,0.5);
+  --donkerRozeKleur: #CC0085;
+  --donkereRozeKleurDoorschijnend: rgb(204,0,133);
+  --rozeKleurNaarBlauweKleur:#CC0085;
+  --rozeKleurNaarLichtBlauweKleur: #CC0085;
+  --witteKleurNaarBlauwekleur: #ffffff;
+  --actieveAccordion: #CC0085;
+  --nonActieveAccordion: #F4F2FF;
+  --ActievePijl: url(../img/driehoek-licht-onder.png);
+  --nonActievePijl: url(../img/driehoek-licht-zijkant.png);
+  --pauseBtn: url(../img/pauze@2x.png);
+  --rewind: url(../img/rewind.png);
+  --forward: url(../img/forward.png);
+ 
+  
+} 
+
+/* dark mode  */
+
+[data-theme="dark"] {
+  --witteKleur: #000000;
+  --zwarteKleur: #000000;
+  --blok: #1D00FF;
+  --lichtRozeKleur: #0076FF;
+  --lichtRozeKleurNaarWitteKleur:#ffffff;
+  --lichtRozeKleurDoorschijnend: rgb(0,118,255,0.5);
+  --donkerRozeKleur: #ffffff;
+  --donkereRozeKleurDoorschijnend: rgb(29,0,255);
+  --rozeKleurNaarBlauweKleur:#1D00FF;
+  --witteKleurNaarBlauwekleur:#1D00FF;
+  --rozeKleurNaarLichtBlauweKleur: #0076FF;
+  --actieveAccordion: #1D00FF;
+  --nonActieveAccordion:#ffffff;
+  --ActievePijl: url(../img/driehoekopen.png); 
+  --nonActievePijl: url(../img/driehoek-donker-zijkant.png);
+  --pauseBtn: url(../img/darkpauze@2x.png);
+  --rewind: url(../img/rewind-dark.png);
+  --forward: url(../img/forward-dark.png);
+  
+}
+
+input[type=checkbox] {
+  visibility: hidden;
+}
+
+
+
+/* darkmodeswitch */
+header label {
+  float: right; 
+}
+
+.darkmode {
+  transform: scale(-1, 1);
+  width: 85px;
+  height: 40px;
+  background-color: var( --lichtRozeKleurNaarWitteKleur) ;
+  float: left;
+  border-radius: 25px;
+  margin-top: -75px;
+  margin-left: 1100px;
+  position: relative;
+  right: 130px; 
+}
+
+.darkmode:before {
+  content: url(../img/moon@2x.png);
+  position: absolute;
+  right: 51px;
+  margin-top: 8px;
+}
+  
+  
+
+
+.darkmode:after {
+  content: url(../img/sun@2x.png);
+ position: absolute;
+ right: 5px; 
+ top: 5px;
+ 
+  
+}
+
+.darkmode label {
+  width: 32px;
+  height: 32px;
+  z-index: 1;
+  background: var( --witteKleurNaarBlauwekleur);
+  border-radius: 25px;
+  margin-left: 50px;
+  position: relative; 
+  top: -11px;
+  right: 50px; 
+
+}
+
+/* .darkmode label:after {
+  margin-left: 10px;
+} */
+
+.darkmode input[type=checkbox]:checked+label {
+  left: -3px;
+  position: relative;
+
+}
+
+
+
+
+body { 
+    background-color:  var( --witteKleur); 
+}
+
+header {
+    position: fixed;
+    width: 100vw; 
+    height: 100px;
+    z-index: 1;
+
+}
+
+#logo {
+    width: 50px;
+    height: 50px; 
+    float:left; 
+    margin: 15px 0px 0px 50px;
+
+}
+.container {
+    max-width: 1200px;
+    padding:0px 40px; 
+    margin: auto;
+}
+
+nav ul {
+    padding-top: 44px;
+    padding-bottom: 44px; 
+    text-align: center; 
+    background: var( --witteKleurNaarBlauwekleur); 
+    border-radius: 0px 0px 33px 33px; 
+}
+ 
+nav ul li {
+    display: inline; 
+
+}
+
+
+nav ul li a {
+    font-family: 'Montserrat-bold';
+    color: var( --donkerRozeKleur); 
+    font-size: 16px; 
+    padding-right: 80px;
+    font-family: 'Montserrat-bold';
+    text-decoration: none;
+    /* margin-left: 30px; */
+   
+}
+
+.image-hero {
+    width:100vw; 
+    height:700px; 
+    background-image: url(../img/daria-nepriakhina-736026-unsplash.jpg); 
+    background-position: top; 
+    background-size: cover; 
+}
+
+.kleur { 
+    width: 100%;
+    height: 100%; 
+    /* background: rgb(253,170,224); */
+    background: linear-gradient(var(--lichtRozeKleurDoorschijnend), var(--donkereRozeKleurDoorschijnend));
+}
+
+h1 {
+    font-size: 60px;
+    line-height: 80px; 
+    font-family: 'Playfair Display'; 
+    font-weight: 600; 
+    padding: 150px 0px 0px 230px;
+    color: white; 
+
+}
+
+.kleur p {
+    color: white; 
+    font-family: 'Montserrat-bold';
+    font-size:22px; 
+    padding: 50px 0px 0px 230px; 
+    width:60%; 
+    line-height: 27px; 
+}
+
+.vierkant { 
+    height:304px ;
+    width:272px ;
+    background-color: var( --blok) ; 
+    padding: 140px 0px 0px 80px; 
+    float: left;
+    border-radius: 10px 10px 10px 10px; 
+    /* margin-right: 10px;  */
+   
+}
+
+#block { 
+    width: 1088px;
+    top: -100px; 
+    margin: auto; 
+    position: relative;
+}
+
+#vierkant1 {
+    margin-right: 16px; 
+}
+
+#vierkant2 {
+    margin-right: 16px; 
+}
+
+
+.clear { 
+    clear: both; 
+}
+
+.img-block { 
+    height: 165px;
+    width: 165px;
+    /* background-color: blue;  */
+    margin-left: 5%; 
+    margin-top: -20%;
+}
+
+.vierkant p { 
+    font-family: 'Montserrat-bold';
+    font-size:22px; 
+    color: var( --donkerRozeKleur); 
+    margin-top: 25%;
+    margin-left: 25%;  
+}
+
+.img-block2 { 
+    height: 165px;
+    width: 165px;
+    /* background-color: blue;  */
+    margin-left: 5%; 
+    margin-top: -20%;
+}
+
+.img-block3 { 
+    height: 165px;
+    width: 165px;
+    /* background-color: blue;  */
+    margin-left: 5%; 
+    margin-top: -20%;
+}
+
+/* playlist styling */ 
+.Playlist{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: var( --donkerRozeKleur); 
+    margin-top: 20px;
+    margin-left: 155px;
+  
+ }
+
+ /* video styling */ 
+ .video-js{
+  width:108.5%;
+  height: 100%;
+  margin-top: -18px;
+
+} 
+
+ /* accordion */ 
+ #accordion{
+    stroke: 1px solid var( --zwarteKleur);
+    max-width: 1088px;
+    margin-left: 150px;
+    margin-top:50px; 
+
+ }
+
+ #accordion h3{
+    font-family: 'Montserrat', sans-serif;
+    font-size:18px ;
+    font-weight: bold;
+    border-style: solid ;
+    width: 1080px;
+    padding: 5px;
+    padding-left: 98px; 
+    line-height: 61px;
+ } 
+
+ .ui-accordion-header{
+  border: 2px solid var(--actieveAccordion);
+  color: var( --donkerRozeKleur);
+  height: 70px;
+  padding-left: 100px;
+  background-image: var(  --ActievePijl);
+  background-size: 50px;
+  background-position: 20px 10px;
+  background-repeat: no-repeat;
+}
+
+.ui-accordion-header-collapsed{
+  border: 2px solid var( --nonActieveAccordion);
+  color: var( --lichtRozeKleurNaarWitteKleur);
+  height: 70px;
+  padding-left: 100px;;
+  background-image: var( --nonActievePijl);
+  background-size: 50px;
+  background-position: 20px 10px;
+  background-repeat: no-repeat;
+  }
+
+
+ /* knoppen */ 
+ .title{
+  font-family: 'Montserrat', sans-serif;
+  font-size:18px ;
+  color: #ffffff;
+  font-weight: bold;
+  border-style: solid ;
+  z-index: 2;
+  position: absolute; 
+}
+
+ .pause {
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+  margin-top: 18%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  background-image: var(--pauseBtn);
+  background-repeat: no-repeat;
+  z-index: 3;
+}
+
+.rewind{
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+  margin-top: 15.5%;
+  left: 40%;
+  position: absolute;
+  background-image: var(--rewind);
+  background-repeat: no-repeat;
+  z-index: 3;
+}
+
+.forward{
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+  margin-top: 15.5%;
+  left: 55%;
+  position: absolute;
+  background-image: var(--forward);
+  background-repeat: no-repeat;
+  z-index: 3;
+}
+.videos:hover .pause {
+  opacity: 1;
+}
+
+.videos:hover .rewind{
+  opacity: 1;
+}
+
+.videos:hover .forward{
+  opacity: 1;
+}
+
+
+ 
+/* styling contacten */ 
+.contacten{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: var( --donkerRozeKleur);
+  margin-left: 2px;
+  margin-top: 50px; 
+}
+
+.support{
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 140px; 
+
+} 
+
+.hulp{
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  max-width: 720px;
+  float: left;
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 140px; 
+
+}
+
+#contact{
+  font-family: 'Montserrat', sans-serif;
+  font-size:22px ;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: var(--rozeKleurNaarBlauweKleur);
+  margin-top: 10px;
+  padding: 30px 80px;
+  border-radius: 15px;
+}
+
+.slider {
+  overflow: auto;
+  white-space: nowrap;
+  padding-top: 250px;
+}
+
+.persoon1{
+  margin-left: 200px;
+  float: left;
+  margin-top: -200px;
+  background-color: var(--blok);
+  width: 200px;
+  border: 2px  var(--blok);
+  border-radius: 15px;
+  padding: 13px 120px;
+  }
+.persoon2{
+     margin-left: 700px;
+     float: left;
+     margin-top: -205px;
+     background-color: var(--blok);
+     width: 200px;
+     border: 2px var(--blok);
+     border-radius: 15px;
+     padding: 13px 120px;
+  }
+  .persoon3{
+     margin-left: 1200px;
+     float: left;
+     margin-top: -205px;
+     background-color: var(--blok);
+     width: 200px;
+     border: 2px  var(--blok);
+     border-radius: 15px;
+     padding: 13px 120px;
+  }
+  .persoon4{
+     margin-left: 1700px;
+     float: left;
+     margin-top: -205px;
+     background-color: var(--blok);
+     width: 200px;
+     border: 2px  var(--blok);
+     border-radius: 15px;
+     padding: 13px 120px;
+  
+  }
+  .fotopersoon img{
+     border-radius: 50%;
+     width: 165px;
+     height: 165px;
+     float: left;
+     margin-left: -80px;
+  }
+  
+  .infopersoon{
+     float: left;
+     margin-top: 7%;
+     margin-left: 15%;
+  }
+  
+  .emailbalkje{
+     width: 118px;
+     height: 40px;
+     background-color: var(--rozeKleurNaarLichtBlauweKleur);
+     border-radius: 10px;
+     display: block;
+     font-family: 'Montserrat', sans-serif;
+     font-size:18px ;
+     font-weight: bold;
+     color: #ffffff;
+     margin-top: 25px;
+     margin-left: 120px;
+     z-index: 5;
+  }
+  
+  .namen{
+     color: var(--donkerRozeKleur);
+     font-family: 'Montserrat', sans-serif;
+     font-size:18px ;
+     font-weight: bold;
+     margin-left: 115px;
+     margin-top: -140px;
+  }
+  
+  .functietekst{
+     color: var(--lichtRozeKleur);
+     font-family: 'Montserrat', sans-serif;
+     font-size:18px ;
+     font-weight: bold;
+     margin-left: 115px;
+     margin-top: 11px;
+  }
+ 
+/* The Modal (background) */
+.modal {
+  display: none; /*Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 7; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: var(--rozeKleurNaarBlauweKleur);
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid var(--witteKleur);
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+  .ml1 {
+    font-weight: 900;
+    font-size: 3.5em;
+    margin-top: -160px;
+  }
+  
+  .ml1 .letter {
+    display: inline-block;
+    line-height: 1em;
+    z-index: 16;
+  }
+  
+  .ml1 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+  }
+  
+  .ml1 .line {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    transform-origin: 0 0;
+  }
+
+/* styling footer */
+footer {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: 20px; 
+  } 
+
+  #myFooter {
+    height: 126px;
+    width: 100%;
+    background-color: white;
+  }
+  
+  #myFooter p {
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    text-align: right;
+    padding-top: 55px;
+    float: right;
+  }
+  
+  #footerID {
+    height: 450px;
+    width: 100%;
+    background: linear-gradient(var(--lichtRozeKleurDoorschijnend), var(--donkereRozeKleurDoorschijnend)),
+    url(../img/nicole-wolf-1339717-unsplash.jpg);
+    background-size: cover;
+    color: white;
+  }
+
+  #footerID h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.725em;
+    padding-top: 150px;
+  }
+  
+  #footerID p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* call to action button */
+
+#komMaarOp {
+    background-color: var(--blok);
+    border: 0px;
+    padding: 15px;
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.125em;
+    color: var(--donkerRozeKleur); 
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin: 100px;
+    cursor: pointer;
+  }
+  
+  /* responsive */ 
+  @media (max-width:1200px) {
+    .image-hero h1 {
+      font-size: 50px; 
+    }
+    .kleur p { 
+      font-size: 18px; 
+
+    }
+
+    
+     /* video styling */ 
+     .video-js{
+      width:89.5%;
+      height:400px;
+      
+    
+    } 
+     #accordion{
+    
+        max-width: 600px;
+    }
+    
+    #accordion h3{
+    width: 800px;
+       
+     } 
+    
+    .support{
+      font-size: 15px;
+    } 
+    
+    .hulp{
+      font-size: 18px;
+      max-width: 600px;
+    }
+    
+    #contact{
+      font-size:18px ;
+      padding: 20px 60px;
+      
+    }
+  } 
+  
+  @media (max-width:1024px) {
+    .image-hero h1 {
+      font-size: 40px; 
+    }
+    .kleur p { 
+      font-size: 15px; 
+
+    }
+      
+    nav ul li a {
+        font-size: 13px; 
+        
+       
+    }
+
+    h1 {
+        font-size: 50px;
+        line-height: 60px; 
+  
+    
+    }
+    
+    .kleur p {
+        font-size:18px; 
+        
+    }
+    
+    .vierkant { 
+        height:150px ;
+        width:170px ; 
+    }
+    
+    #block { 
+        width: 800px;
+        top: -100px; 
+        margin-left: 12%; 
+        position: relative;
+    }
+    
+    .img-block { 
+        height: 130px;
+        width: 130px;
+        margin-left: -10%; 
+        margin-top: -40%;
+    }
+    
+    .vierkant p { 
+    font-size:18px; 
+    margin-top: 18%;
+    margin-left: 9%;  
+    }
+    
+    .img-block2 { 
+        height: 130px;
+        width: 130px;
+        margin-left: -10%; 
+        margin-top: -40%;
+    }
+    
+    .img-block3 { 
+        height: 130px;
+        width: 130px;
+        margin-left: -10%; 
+        margin-top: -40%;
+    }
+    
+   
+    .Playlist{
+     font-size: 16px;
+    }
+  
+     .video-js{
+      width:118%;
+      height: 100%;
+      
+    
+    } 
+     #accordion{
+        max-width: 600px;
+        margin-left: 20%;
+        margin-top:40px; 
+    
+     }
+    
+     #accordion h3{
+        
+        font-size:16px ;
+        width: 600px;
+        padding: 5px;
+        padding-left: 100px; 
+        
+     } 
+     
+    
+     .title{
+      z-index: 4;
+      
+    }
+    
+     .pause {
+      margin-top: 30%;
+      left: 57%;
+      
+    }
+    
+    .rewind{
+    
+      margin-top: 27%;
+      left: 43%;
+     
+    }
+    
+    .forward{
+      
+      margin-top: 27%;
+      left: 65%;
+    
+    }
+    
+    
+    .contacten{
+      
+      margin-left: 2px;
+      margin-top: 50px; 
+    }
+    
+    .support{
+      font-size: 16px;
+      margin-left:20%;
+    
+    } 
+    
+    .hulp{
+      font-size: 18px;
+  
+      max-width: 400px;
+      
+      margin-left: 20%; 
+    
+    }
+    
+    #contact{
+      
+      font-size:18px ;
+      margin-top: 23px;
+      margin-left: 20px;
+      padding: 15px 45px;
+      
+    }
+    
+    .slider {
+      padding-top: 150px;
+    }
+    
+    .persoon1{
+      padding: 0px 80px;
+      }
+    .persoon2{
+         
+         margin-top: -200px;
+         padding: 0px 80px;
+      }
+      .persoon3{
+         margin-top: -200px;
+         padding: 0px 80px;
+      }
+      .persoon4{
+        
+         margin-top: -200px;
+         padding: 0px 80px;
+      
+      }
+      .fotopersoon img{
+         
+         width: 120px;
+         height: 120px;
+         margin-left: -50px;
+         margin-top: 60px;
+      }
+      
+      .infopersoon{
+         float: left;
+         margin-top: 7%;
+         margin-left: 15%;
+      }
+      
+      .emailbalkje{
+         width: 100px;
+         height: 30px;
+         font-size:16px ;
+         margin-top: 12px;
+         margin-left: 100px;
+         
+      }
+      
+      .namen{
+      
+         font-size:15px ;
+         margin-left: 100px;
+         margin-top: -110px;
+      }
+      
+      .functietekst{
+        font-size:16px ;
+        margin-left: 100px;
+         margin-top: 11px;
+      }
+     
+     #footerID h2 {
+       
+        font-size: 50px; 
+      }
+    
+    
+    
+    #komMaarOp {
+     font-size: 15px;
+        margin-top: 60px;
+       
+      }
+
+  }
+
+  @media (max-width:915px) {
+
+    nav ul {
+        
+        text-align: left;  
+        padding-left: 200px;
+    }
+ 
+    
+    
+    nav ul li a {
+        font-size: 13px; 
+        padding-right: 40px;
+}
+
+    
+    h1 {
+        font-size: 50px;
+        line-height: 60px;
+        padding: 160px 0px 0px 130px;
+        
+    }
+    
+    .kleur p {
+     font-size:18px; 
+        padding: 50px 0px 0px 130px; 
+       
+        line-height: 30px; 
+    }
+    
+    .vierkant { 
+        height:304px ;
+        width:272px ;
+        padding: 140px 0px 0px 80px; 
+        
+        
+    }
+    
+    #block { 
+        width: 600px;
+        top: -100px; 
+        margin-left: 30%; 
+        position: relative;
+        padding-bottom: 80px; 
+    }
+    
+    #vierkant1 {
+        margin-right: 16px; 
+        margin-bottom: 20px;
+    }
+    
+    #vierkant2 {
+        margin-right: 16px; 
+        margin-bottom: 20px;
+    }
+    
+    
+    .clear { 
+        clear: both; 
+    }
+    
+    .img-block { 
+        height: 165px;
+        width: 165px;
+        margin-left: 5%; 
+        margin-top: -20%;
+    }
+    
+    .vierkant p { 
+        margin-top: 25%;
+        margin-left: 25%;  
+    }
+    
+    .img-block2 { 
+        height: 165px;
+        width: 165px;
+       
+        margin-left: 5%; 
+        margin-top: -20%;
+    }
+    
+    .img-block3 { 
+        height: 165px;
+        width: 165px;
+      
+        margin-left: 5%; 
+        margin-top: -20%;
+    }
+
+    .Playlist{
+      font-size: 16px;
+      margin-left: 10%;
+     }
+   
+     
+
+      #accordion{
+         max-width: 600px;
+         margin-left: 10%;
+         margin-top:40px; 
+     
+      }
+     
+      .pause {
+       margin-top: 22%;
+       left: 50%;
+       
+     }
+     
+     .rewind{
+     
+       margin-top: 18%;
+       left: 35%;
+      
+     }
+     
+     .forward{
+       
+       margin-top: 18%;
+       left: 58%;
+     
+     }
+     
+     
+     .contacten{
+       
+       margin-left: 2px;
+       margin-top: 50px; 
+     }
+     
+     .support{
+       font-size: 13px;
+       margin-left:10%;
+     
+     } 
+     
+     .hulp{
+       font-size: 13px;
+   
+       max-width: 300px;
+       
+       margin-left: 10%; 
+     
+     }
+     
+     #contact{
+       
+       font-size:13px ;
+       margin-top: 23px;
+       margin-left: 30px;
+       padding: 15px 45px;
+       
+     }
+     
+     .slider {
+       padding-top: 100px;
+     }
+     
+     .persoon1{
+       padding: 0px 30px;
+       margin-top: -160px;
+       }
+     
+       .persoon2{
+          
+          margin-top: -180px;
+          padding: 0px 40px;
+       }
+       .persoon3{
+          margin-top: -180px;
+          padding: 0px 40px;
+       }
+       .persoon4{
+         
+          margin-top: -180px;
+          padding: 0px 40px;
+       
+       }
+       .fotopersoon img{
+          
+          width: 80px;
+          height: 80px;
+          margin-left: -10px;
+          margin-top: 80px;
+       }
+       
+       .infopersoon{
+          float: left;
+          margin-top: 7%;
+          margin-left: 15%;
+       }
+       
+       .emailbalkje{
+          width: 80px;
+          height: 30px;
+          font-size:14px ;
+          margin-top: 12px;
+          margin-left: 80px;
+          margin-bottom: 10px;
+          
+       }
+       
+       .namen{
+       
+          font-size:12px ;
+          margin-left: 80px;
+          margin-top: -80px;
+       }
+       
+       .functietekst{
+         font-size:13px ;
+         margin-left: 80px;
+         margin-top: 11px;
+       }
+      
+      #footerID h2 {
+        
+         font-size: 35px; 
+       }
+     
+     
+     
+     #komMaarOp {
+      font-size: 13px;
+      margin-top: 70px;
+        
+       }
+    
+       #footerID p {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+
+  }
+
+  @media (max-width:700px){
+
+    .darkmode {
+      
+      margin-top: -100px; 
+      right: 250px; 
+    }
+    
+    .image-hero h1 {
+      font-size: 30px;
+      margin-left: -10%; 
+  }
+    
+
+  
+  h1 {
+   
+      line-height: 60px;
+      padding: 160px 0px 0px 130px;
+      
+  }
+  
+  .kleur p {
+  font-size: 13px; 
+  padding: 50px 0px 0px 65px; 
+  line-height: 25px; 
+  }
+  
+  .vierkant { 
+      height:250px ;
+      width:200px ;
+      padding: 140px 0px 0px 80px; 
+      
+      
+  }
+  
+  #block { 
+      width: 300px;
+      top: -100px; 
+      margin-left: 26%; 
+      position: relative;
+      padding-bottom: 80px; 
+  }
+  
+  #vierkant1 {
+      margin-right: 16px; 
+      margin-bottom: 20px;
+  }
+  
+  #vierkant2 {
+      margin-right: 16px; 
+      margin-bottom: 20px;
+  }
+  
+  
+  .clear { 
+      clear: both; 
+  }
+  
+  .img-block { 
+      height: 150px;
+      width: 150px;
+      margin-left: -4%; 
+      margin-top: -20%;
+  }
+  
+  .vierkant p { 
+      margin-top: 18%;
+      margin-left: 18%;  
+  }
+  
+  .img-block2 { 
+      height: 165px;
+      width: 165px;
+     
+      margin-left: -10%; 
+      margin-top: -20%;
+  }
+  
+  .img-block3 { 
+      height: 165px;
+      width: 165px;
+    
+      margin-left: -10%; 
+      margin-top: -20%;
+  }
+
+  .Playlist{
+    font-size: 16px;
+    margin-left: 10%;
+   }
+
+ .video-js{
+  widows: 108.5%;
+  height: 100%;
+  margin-top: -18px;
+
+} 
+#accordion{
+       max-width: 400px;
+       margin-left: 10%;
+       margin-top:40px; 
+       
+   
+    }
+
+#accordion h3{
+        
+      font-size:13px ;
+      width: 400px;
+      padding: 5px;
+      padding-left: 100px; 
+  } 
+
+  .title{
+    
+    font-size:13px ;
+   
+    
+    z-index: 2;
+  
+  }
+
+  .pause {
+     margin-top: 25%;
+     left: 45%;
+     
+   }
+   
+   .rewind{
+   
+     margin-top: 20%;
+     left: 25%;
+    
+   }
+   
+   .forward{
+     
+     margin-top: 20%;
+     left: 55%;
+   
+   }
+   
+   
+   .contacten{
+     
+     margin-left: 2px;
+     margin-top: 50px; 
+   }
+   
+   .support{
+     font-size: 13px;
+     margin-left:10%;
+   
+   } 
+   
+   .hulp{
+     font-size: 13px;
+ 
+     max-width: 300px;
+     
+     margin-left: 10%; 
+   
+   }
+   
+   #contact{
+     
+     font-size:13px ;
+     margin-top: 23px;
+     margin-left: 30px;
+     padding: 15px 45px;
+     
+   }
+   
+   .slider {
+     padding-top: 100px;
+   }
+   
+   .persoon1{
+     padding: 0px 30px;
+     margin-top: -160px;
+     }
+   
+     .persoon2{
+        
+        margin-top: -180px;
+        padding: 0px 40px;
+     }
+     .persoon3{
+        margin-top: -180px;
+        padding: 0px 40px;
+     }
+     .persoon4{
+       
+        margin-top: -180px;
+        padding: 0px 40px;
+     
+     }
+     .fotopersoon img{
+        
+        width: 80px;
+        height: 80px;
+        margin-left: -10px;
+        margin-top: 80px;
+     }
+     
+     .infopersoon{
+        float: left;
+        margin-top: 7%;
+        margin-left: 15%;
+     }
+     
+     .emailbalkje{
+        width: 80px;
+        height: 30px;
+        font-size:14px ;
+        margin-top: 12px;
+        margin-left: 80px;
+        margin-bottom: 10px;
+        
+     }
+     
+     .namen{
+     
+        font-size:12px ;
+        margin-left: 80px;
+        margin-top: -80px;
+     }
+     
+     .functietekst{
+       font-size:13px ;
+       margin-left: 80px;
+       margin-top: 11px;
+     }
+    
+    #footerID h2 {
+      
+       font-size: 35px; 
+     }
+   
+   
+   
+   #komMaarOp {
+    font-size: 13px;
+    margin-top: 70px;
+      
+     }
+  
+     #footerID p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  @media (max-width:500px){
+  
+.darkmode {
+   
+    margin-top: -100px; 
+    right: 50px; 
+  }
+  
+  .image-hero h1 {
+    font-size: 20px;
+    margin-left: -17%; 
+}
+  
+nav ul li a {
+  
+  font-size: 12px; 
+  padding-right: 80px;
+ 
+
+ 
+}
+
+h1 {
+ 
+    line-height: 30px;
+    padding: 160px 0px 0px 130px;
+    
+}
+
+.kleur p {
+font-size: 10px; 
+padding: 50px 0px 0px 65px; 
+line-height: 25px; 
+}
+
+.vierkant { 
+    height:100px ;
+    width:100px ;
+    padding: 120px 0px 0px 80px; 
+    
+    
+}
+
+#block { 
+    width: 300px;
+    top: -100px; 
+    margin-left: 26%; 
+    position: relative;
+    padding-bottom: 80px; 
+}
+
+#vierkant1 {
+    margin-right: 16px; 
+    margin-bottom: 30px;
+}
+
+#vierkant2 {
+    margin-right: 16px; 
+    margin-bottom: 30px;
+}
+
+
+.clear { 
+    clear: both; 
+}
+
+.img-block { 
+    height: 100px;
+    width: 100px;
+    margin-left: -38%;
+    margin-top: -70%;  
+    /* margin-left: -4%; 
+    margin-top: -20%; */
+}
+
+.vierkant p { 
+    margin-top: 15%;
+    margin-left: -20%;  
+}
+
+.img-block2 { 
+    height: 100px;
+    width: 100px;
+    margin-left: -30%;
+    margin-top: -50%; 
+   
+    /* margin-left: -10%; 
+    margin-top: -20%; */
+}
+
+.img-block3 { 
+    height: 100px;
+    width: 100px;
+    margin-left: -37%;
+    margin-top: -50%;
+  
+    /* margin-left: -10%; 
+    margin-top: -20%; */
+}
+
+.Playlist{
+  font-size: 13px;
+  margin-left: 10%;
+ }
+
+.video-js{
+widows: 108.5%;
+height: 100%;
+margin-top: -18px;
+
+} 
+#accordion{
+     max-width: 300px;
+     margin-left: 10%;
+     margin-top:40px; 
+     
+ 
+  }
+
+#accordion h3{
+      
+    font-size:13px ;
+    width: 300px;
+    padding: 10px;
+    padding-left: 100px; 
+} 
+
+.title{
+  
+  font-size:13px ;
+ 
+  
+  z-index: 2;
+
+}
+ 
+.pause {
+   margin-top: 25%;
+   left: 45%;
+   
+ }
+ 
+ .rewind{
+ 
+   margin-top: 20%;
+   left: 25%;
+  
+ }
+ 
+ .forward{
+   
+   margin-top: 20%;
+   left: 55%;
+ 
+ }
+ 
+ 
+ .contacten{
+   
+   margin-left: 2px;
+   margin-top: 50px; 
+ }
+ 
+ .support{
+   font-size: 13px;
+   margin-left:10%;
+ 
+ } 
+ 
+ .hulp{
+   font-size: 13px;
+
+   max-width: 220px;
+   
+   margin-left: 11%; 
+ 
+ }
+ 
+ #contact{
+   
+   font-size:10px ;
+   margin-top: -20px;
+   margin-left: 50px;
+   padding: 15px 45px;
+   
+ }
+ 
+ .slider {
+   padding-top: 100px;
+ }
+ 
+ .persoon1{
+   padding: 0px 30px;
+   margin-top: -160px;
+   }
+ 
+   .persoon2{
+      
+      margin-top: -180px;
+      padding: 0px 40px;
+   }
+   .persoon3{
+      margin-top: -180px;
+      padding: 0px 40px;
+   }
+   .persoon4{
+     
+      margin-top: -180px;
+      padding: 0px 40px;
+   
+   }
+   .fotopersoon img{
+      
+      width: 80px;
+      height: 80px;
+      margin-left: -10px;
+      margin-top: 80px;
+   }
+   
+   .infopersoon{
+      float: left;
+      margin-top: 7%;
+      margin-left: 15%;
+   }
+   
+   .emailbalkje{
+      width: 80px;
+      height: 30px;
+      font-size:14px ;
+      margin-top: 12px;
+      margin-left: 80px;
+      margin-bottom: 10px;
+      
+   }
+   
+   .namen{
+   
+      font-size:12px ;
+      margin-left: 80px;
+      margin-top: -80px;
+   }
+   
+   .functietekst{
+     font-size:13px ;
+     margin-left: 80px;
+     margin-top: 11px;
+   }
+  
+  #footerID h2 {
+    
+     font-size: 25px; 
+   }
+ 
+ 
+ 
+ #komMaarOp {
+  font-size: 10px;
+  margin-top: 80px;
+    
+   }
+
+   #footerID p {
+    font-size: 13px;
+
+  }
+
+
+
+  }
+  
+  @media (max-width:350px){
+    .darkmode {
+   
+      margin-top: -100px; 
+      right: 50px; 
+    }
+    
+    .image-hero h1 {
+      font-size: 15px;
+      margin-left: -17%; 
+  }
+    
+  nav ul li a {
+    
+    font-size: 10px; 
+    padding-right: 80px;
+   
+  
+   
+  }
+  
+  h1 {
+   
+      line-height: 30px;
+      padding: 160px 0px 0px 130px;
+      
+  }
+  
+  .kleur p {
+  font-size: 10px; 
+  padding: 50px 0px 0px 65px; 
+  line-height: 15px; 
+  }
+  
+  .vierkant { 
+      height:100px ;
+      width:100px ;
+      padding: 120px 0px 0px 80px; 
+      
+      
+  }
+  
+  #block { 
+      width: 300px;
+      top: -100px; 
+      margin-left: 26%; 
+      position: relative;
+      padding-bottom: 80px; 
+  }
+  
+  #vierkant1 {
+      margin-right: 16px; 
+      margin-bottom: 30px;
+  }
+  
+  #vierkant2 {
+      margin-right: 16px; 
+      margin-bottom: 30px;
+  }
+  
+  
+  .clear { 
+      clear: both; 
+  }
+  
+  .img-block { 
+      height: 100px;
+      width: 100px;
+      margin-left: -38%;
+      margin-top: -70%;  
+      /* margin-left: -4%; 
+      margin-top: -20%; */
+  }
+  
+  .vierkant p { 
+      margin-top: 15%;
+      margin-left: -20%;  
+  }
+  
+  .img-block2 { 
+      height: 100px;
+      width: 100px;
+      margin-left: -30%;
+      margin-top: -50%; 
+     
+      /* margin-left: -10%; 
+      margin-top: -20%; */
+  }
+  
+  .img-block3 { 
+      height: 100px;
+      width: 100px;
+      margin-left: -37%;
+      margin-top: -50%;
+    
+      /* margin-left: -10%; 
+      margin-top: -20%; */
+  }
+  
+  .Playlist{
+    font-size: 13px;
+    margin-left: 10%;
+   }
+  
+  .video-js{
+  widows: 100%;
+  height: 100%;
+  margin-top: -18px;
+  
+  } 
+  #accordion{
+       max-width: 150px;
+       margin-left: 10%;
+       margin-top:40px; 
+       
+   
+    }
+  
+  #accordion h3{
+        
+      font-size:8px ;
+      width: 150px;
+      padding: 10px;
+      padding-left: 100px; 
+  } 
+  
+  .title{
+    
+    font-size:13px ;
+   
+    
+    z-index: 2;
+  
+  }
+   
+  .pause {
+     margin-top: 25%;
+     left: 45%;
+     
+   }
+   
+   .rewind{
+   
+     margin-top: 20%;
+     left: 25%;
+    
+   }
+   
+   .forward{
+     
+     margin-top: 20%;
+     left: 55%;
+   
+   }
+   
+   
+   .contacten{
+     
+     margin-left: 2px;
+     margin-top: 50px; 
+   }
+   
+   .support{
+     font-size: 10px;
+     margin-left:10%;
+   
+   } 
+   
+   .hulp{
+     font-size: 10px;
+  
+     max-width: 220px;
+     
+     margin-left: 11%; 
+   
+   }
+   
+   #contact{
+     
+     font-size:10px ;
+     margin-top: -10px;
+     margin-left: 30px;
+     padding: 15px 20px;
+     
+   }
+   
+   .slider {
+     padding-top: 100px;
+   }
+   
+   .persoon1{
+     padding: 0px 30px;
+     margin-top: -160px;
+     }
+   
+     .persoon2{
+        
+        margin-top: -180px;
+        padding: 0px 40px;
+     }
+     .persoon3{
+        margin-top: -180px;
+        padding: 0px 40px;
+     }
+     .persoon4{
+       
+        margin-top: -180px;
+        padding: 0px 40px;
+     
+     }
+     .fotopersoon img{
+        
+        width: 80px;
+        height: 80px;
+        margin-left: -10px;
+        margin-top: 80px;
+     }
+     
+     .infopersoon{
+        float: left;
+        margin-top: 7%;
+        margin-left: 15%;
+     }
+     
+     .emailbalkje{
+        width: 80px;
+        height: 30px;
+        font-size:14px ;
+        margin-top: 12px;
+        margin-left: 80px;
+        margin-bottom: 10px;
+        
+     }
+     
+     .namen{
+     
+        font-size:12px ;
+        margin-left: 80px;
+        margin-top: -80px;
+     }
+     
+     .functietekst{
+       font-size:13px ;
+       margin-left: 80px;
+       margin-top: 11px;
+     }
+    
+    #footerID h2 {
+      
+       font-size: 20px; 
+     }
+   
+    #komMaarOp {
+    font-size: 9px;
+    margin-top: 80px;
+      
+     }
+  
+     #footerID p {
+      font-size: 10px;
+  
+    }
+  
+  
+  }
